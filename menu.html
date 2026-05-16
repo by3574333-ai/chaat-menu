@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Chaat Factory</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #fff8e1;
+}
+
+.header {
+  background: #ff3d00;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.tagline {
+  font-size: 14px;
+}
+
+.section {
+  padding: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  background: #ff9800;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.cart {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <h2>THE CHAAT FACTORY</h2>
+  <div class="tagline">Har Bite Mein Maza</div>
+</div>
+
+<div class="section">
+<h3>🥙 Pani Puri Special</h3>
+
+<div class="item">Classic Pani Puri - ₹30 <button onclick="add(30)">Add</button></div>
+<div class="item">Ragda Puri - ₹40 <button onclick="add(40)">Add</button></div>
+<div class="item">Masala Puri - ₹40 <button onclick="add(40)">Add</button></div>
+<div class="item">Sev Puri - ₹40 <button onclick="add(40)">Add</button></div>
+
+<h3>🍲 Bhel Items</h3>
+
+<div class="item">Mataki Bhel - ₹40 <button onclick="add(40)">Add</button></div>
+<div class="item">Sukhi Bhel - ₹35 <button onclick="add(35)">Add</button></div>
+<div class="item">Classic Bhel - ₹30 <button onclick="add(30)">Add</button></div>
+
+<h3>🥗 Chaat Items</h3>
+
+<div class="item">Bhel Puri - ₹35 <button onclick="add(35)">Add</button></div>
+<div class="item">Sev Puri - ₹40 <button onclick="add(40)">Add</button></div>
+<div class="item">Aloo Chaat - ₹45 <button onclick="add(45)">Add</button></div>
+
+<h3>🔥 Special Items</h3>
+
+<div class="item">Dahi Puri - ₹50 <button onclick="add(50)">Add</button></div>
+<div class="item">Chana Chaat - ₹45 <button onclick="add(45)">Add</button></div>
+
+</div>
+
+<div class="cart" id="cart">
+Total: ₹0
+</div>
+
+<script>
+let total = 0;
+
+function add(price) {
+  total += price;
+  document.getElementById("cart").innerText = "Total: ₹" + total;
+}
+</script>
+
+</body>
+</html>
